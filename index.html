@@ -1,0 +1,60 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+<!-- banner -->
+<section class="banner_w3lspvt" id="home">
+  <div class="csslider infinity" id="slider1">
+    <div class="banner-top">
+      <div class="overlay">
+        <div class="container">
+          <div class="w3layouts-banner-info text-center">
+            <h3 class="text-wh" data-translate="AgroVision">AgroVision</h3>
+            <h4 class="text-wh mx-auto my-4" data-translate="Your Guide to Smarter, Sustainable Farming"><b>Your Guide to Smarter, Sustainable Farming</b></h4>
+            <br>
+            <h4 class="text-wh mx-auto my-4" data-translate="Here’s what we’ll help you uncover"><strong> Here’s what we’ll help you uncover</strong></h4>
+            <p class="text-li mx-auto mt-2" data-translate="1. Which crop is best suited for your location? <br>2. What is the ideal fertilizer for your crop? <br>3. What disease is affecting your crop?<br>4. What’s the best way to treat this disease?">1. Which crop is best suited for your location? <br>2. What is the ideal fertilizer for your crop? <br>3. What disease is affecting your crop?<br>4. What’s the best way to treat this disease?</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- //banner -->
+
+<!-- Products & Services -->
+<section class="blog py-5">
+  <div class="container py-md-5">
+    <h3 class="heading mb-sm-5 mb-4 text-center" data-translate="We Offer"> We Offer</h3>
+    <div class="row blog-grids">
+      <div class="col-lg-4 col-md-6 blog-left mb-lg-0 mb-sm-5 pb-lg-0 pb-5">
+        <img src="{{ url_for('static', filename='images/cropp.jpg') }}" class="img-fluid" alt="" />
+        <a href="{{ url_for('crop_recommend') }}">
+          <div class="blog-info">
+            <h4 data-translate="Crop">Crop</h4>
+            <p class="mt-2" data-translate="Recommendations on the most suitable crops to cultivate based on specific conditions."> Recommendations on the most suitable crops to cultivate based on specific conditions.</p>
+          </div>
+        </a>
+      </div>
+      <div class="col-lg-4 col-md-6 blog-middle mb-lg-0 mb-sm-5 pb-lg-0 pb-md-5">
+        <img src="{{ url_for('static', filename='images/crop 2.jpg') }}" class="img-fluid" alt="" />
+        <a href="{{ url_for('fertilizer_recommendation') }}">
+          <div class="blog-info">
+            <h4 data-translate="Fertilizer">Fertilizer</h4>
+            <p class="mt-2" data-translate="Recommendations on the most suitable fertilizer for the specific soil and chosen crop.">Recommendations on the most suitable fertilizer for the specific soil and chosen crop.</p>
+          </div>
+        </a>
+      </div>
+      <div class="col-lg-4 col-md-6 blog-right mt-lg-0 mt-5 pt-lg-0 pt-md-5">
+        <img src="{{ url_for('static', filename='images/crop 3.jpg') }}" class="img-fluid" alt="">
+        <a href="{{ url_for('disease_prediction') }}">
+          <div class="blog-info">
+            <h4 data-translate="Crop Disease">Crop Disease</h4>
+            <p class="mt-2" data-translate="Identifying crop diseases, their causes, and providing suggestions for effective treatment.">Identifying crop diseases, their causes, and providing suggestions for effective treatment.</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- //Products & Services -->
+{% endblock %}
